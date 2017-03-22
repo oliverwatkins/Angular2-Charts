@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       <a routerLink="/bar" routerLinkActive="active">Bar Chart</a>
       
       
-      <!--providers: [SharedService],-->
+      <!--providers: [SharedService], asdf-->
       
     </nav>
     <router-outlet></router-outlet>
