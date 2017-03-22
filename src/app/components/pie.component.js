@@ -38,8 +38,8 @@ var PieChartComponent = (function () {
     PieChartComponent = __decorate([
         core_1.Component({
             selector: 'pie-chart-component',
-            template: "\n\n        <pie-chart-component-form></pie-chart-component-form>\n        <div style=\"display: block\">\n        <div id=\"canvasTitle\">{{chartName}}</div>\n        <div id=\"canvasDiv\">\n        \n          <canvas id=\"canvasDiv\" baseChart\n                  [data]=\"pieChartData\"\n                  [labels]=\"pieChartLabels\"\n                  [chartType]=\"pieChartType\"\n                  (chartHover)=\"chartHovered($event)\"\n                  (chartClick)=\"chartClicked($event)\"></canvas>\n          </div>\n\n        </div>\n  ",
-            styles: ["\n        /*canvas {*/\n          /*width: 50px;*/\n          /*height: 50px;*/\n        /*}*/\n        div #canvasDiv {\n          width: 250px;\n          height: 250px;\n        }\n        "]
+            template: "\n\n        <div class=\"row\">\n        \n        <div class=\"col-md-5\">\n            <pie-chart-component-form></pie-chart-component-form>\n        </div>\n        \n        <div class=\"col-md-5\">\n        \n            <div id=\"canvasTitle\" >\n                <h1 class=\"text-center\">{{chartName}}</h1>\n            </div>\n            <!--<div id=\"canvasDiv\" class=\"text-center\">-->\n        \n                <canvas id=\"canvasDiv\" baseChart\n                  [data]=\"pieChartData\"\n                  [labels]=\"pieChartLabels\"\n                  [chartType]=\"pieChartType\"\n                  (chartHover)=\"chartHovered($event)\"\n                  (chartClick)=\"chartClicked($event)\"></canvas>\n            <!--</div>-->\n        </div>\n    </div>\n  ",
+            styles: ["\n\n        div #canvasDiv {\n          width: 450px;\n          height: 450px;\n        }\n        "]
         }), 
         __metadata('design:paramtypes', [logged_service_1.LoggedService])
     ], PieChartComponent);

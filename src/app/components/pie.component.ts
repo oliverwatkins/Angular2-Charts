@@ -8,29 +8,34 @@ import {ChartInfo} from "./chart-info";
     selector: 'pie-chart-component',
     template: `
 
-        <pie-chart-component-form></pie-chart-component-form>
-        <div style="display: block">
-        <div id="canvasTitle">{{chartName}}</div>
-        <div id="canvasDiv">
+        <div class="row">
         
-          <canvas id="canvasDiv" baseChart
+        <div class="col-md-5">
+            <pie-chart-component-form></pie-chart-component-form>
+        </div>
+        
+        <div class="col-md-5">
+        
+            <div id="canvasTitle" >
+                <h1 class="text-center">{{chartName}}</h1>
+            </div>
+            <!--<div id="canvasDiv" class="text-center">-->
+        
+                <canvas id="canvasDiv" baseChart
                   [data]="pieChartData"
                   [labels]="pieChartLabels"
                   [chartType]="pieChartType"
                   (chartHover)="chartHovered($event)"
                   (chartClick)="chartClicked($event)"></canvas>
-          </div>
-
+            <!--</div>-->
         </div>
+    </div>
   `,
     styles: [`
-        /*canvas {*/
-          /*width: 50px;*/
-          /*height: 50px;*/
-        /*}*/
+
         div #canvasDiv {
-          width: 250px;
-          height: 250px;
+          width: 450px;
+          height: 450px;
         }
         `]
 })

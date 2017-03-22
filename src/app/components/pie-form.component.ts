@@ -9,7 +9,7 @@ import {ColorPickerService} from 'angular2-color-picker';
     selector: 'pie-chart-component-form',
     template: `
         <div>
-            <div class="col-xs-7">
+            <div>
                 <h3>Enter Chart Title Here : </h3>
                 <input #charttitle type="text" class="form-control" [(ngModel)]="chartName" (keyup)="keypress(charttitle.value)"/>
             </div>
